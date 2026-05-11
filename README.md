@@ -29,47 +29,60 @@ Przykładowy kod źródłowy zawarty w tym repozytorium pozwala w szczególnośc
 
 ## 1. Przygotowanie projektu Google Cloud
 
-1. Uzyskaj kredyt Cloud **OnRamp**, lub skonfiguruj płatności w projekcie Google Cloud
+1. Aktywuj kupon Google Cloud Credits pod adresem otrzymanym od prowadzącego. Wypełnij formularz swoimi danymi i kliknij **Zaakceptuj i kontynuuj**.
 
-2. Przejdź do **Google Cloud Console**: [console.cloud.google.com](https://console.cloud.google.com)
+   ![Aktywacja kuponu Google Cloud Credits](images/google-credits-0.png)
 
-3. Stwórz nowy projekt Google Cloud i wybierz go aby był aktywny
->[!TIP]
->Możesz sprawdzić dostępność kredytów OnRamp wybierając z menu po lewej stronie: Billing / Credits
+2. Po aktywacji kuponu zostanie utworzone nowe konto rozliczeniowe. Przejdź do **Płatności → Przegląd**, aby zweryfikować, że kredyty zostały przyznane.
 
-4. Otwórz Cloud Shell ([dokumentacja](https://cloud.google.com/shell/docs))
+   ![Przegląd konta rozliczeniowego](images/google-credits-1.png)
 
-5. Zweryfikuj konto które jest zalogowane w Cloud Shell
+3. Skopiuj **Identyfikator konta rozliczeniowego** — znajdziesz go w **Płatności → Zarządzanie kontem**.
+
+   ![Identyfikator konta rozliczeniowego](images/google-credits-2.png)
+
+4. Zweryfikuj przyznane środki w **Płatności → Środki**.
+
+   ![Przyznane środki Google Cloud Credits](images/google-credits-3.png)
+
+5. Otwórz Cloud Shell ([dokumentacja](https://cloud.google.com/shell/docs))
+
+6. Zweryfikuj konto które jest zalogowane w Cloud Shell
    ```bash
    gcloud auth list
    ```
 >[!TIP]
 >Jeżeli konto nie jest zalogowane, lub jest to inne konto niż to z dostępem do Twojego projektu Google Cloud, zaloguj się za pomocą komendy: `gcloud auth login`
 
-6. Potwierdź, że wybrany jest odpowiedni projekt Google Cloud
+7. Utwórz nowy projekt Google Cloud
    ```bash
-   gcloud config get project
-   ```
->[!TIP]
->Jeżeli projekt jest nieodpowiedni, zmień go za pomocą komendy: `gcloud config set project <ID_TWOJEGO_PROJEKTU>`
-
->[!CAUTION]
->Nie pomyl nazwy projektu z ID projektu! Nie zawsze są one takie same.
-
-7. Sklonuj repozytorium z przykładowym kodem i przejdź do nowoutworzonego katalogu
-   ```bash
-   git clone https://github.com/avedave/eskadra-bielik-misja2
+   gcloud projects create bielik-plock-2026 --name="Bielik Plock 2026"
    ```
 
-8. Przejdź do katalogu z kodem źródłowym
+8. Powiąż projekt z kontem rozliczeniowym (wstaw swój identyfikator konta z kroku 3)
    ```bash
-   cd eskadra-bielik-misja2
+   gcloud billing projects link bielik-plock-2026 --billing-account=XXXXXX-XXXXXX-XXXXXX
    ```
 
-9. Uruchom edytor w katalogu z kodem źródłowym
+9. Ustaw projekt jako aktywny
    ```bash
-   cloudshell workspace .
+   gcloud config set project bielik-plock-2026
    ```
+
+10. Sklonuj repozytorium z przykładowym kodem
+    ```bash
+    git clone https://github.com/avedave/eskadra-bielik-misja2
+    ```
+
+11. Przejdź do katalogu z kodem źródłowym
+    ```bash
+    cd eskadra-bielik-misja2
+    ```
+
+12. Uruchom edytor w katalogu z kodem źródłowym
+    ```bash
+    cloudshell workspace .
+    ```
 
 ## 2. Konfiguracja zmiennych środowiskowych i usług Google Cloud
 
