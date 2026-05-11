@@ -45,7 +45,9 @@ Przykładowy kod źródłowy zawarty w tym repozytorium pozwala w szczególnośc
 
    ![Przyznane środki Google Cloud Credits](images/google-credits-3.png)
 
-5. Otwórz Cloud Shell ([dokumentacja](https://cloud.google.com/shell/docs))
+5. Otwórz Cloud Shell — kliknij ikonę w prawym górnym rogu konsoli ([dokumentacja](https://cloud.google.com/shell/docs))
+
+   ![Aktywacja Cloud Shell](images/google-credits-4.png)
 
 6. Zweryfikuj konto które jest zalogowane w Cloud Shell
    ```bash
@@ -100,8 +102,14 @@ Przykładowy kod źródłowy zawarty w tym repozytorium pozwala w szczególnośc
 4. Włącz potrzebne usługi w projekcie Google Cloud
    ```bash
    gcloud services enable run.googleapis.com
+   ```
+   ```bash
    gcloud services enable cloudbuild.googleapis.com
+   ```
+   ```bash
    gcloud services enable artifactregistry.googleapis.com
+   ```
+   ```bash
    gcloud services enable bigquery.googleapis.com
    ```
 5. Uzyskaj uprawnienia do wywoływania usług Cloud Run
