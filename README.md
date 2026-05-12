@@ -278,5 +278,20 @@ Aby otworzyć interfejs graficzny testowej aplikacji z poziomu Twojego projektu:
 2. Po otwarciu opublikowanej strony w Twojej przeglądarce internetowej, wpisz w okno dialogowe dowolne zapytanie (np. "Do której godziny jest otwarty basen?") i kliknij "Zapytaj".
 3. Porównaj strumień odpowiedzi wyświetlany dla samej bazy wiedzy modelu (bez dodatkowego kontekstu) z bogatszą odpowiedzią RAG wygenerowaną w oparciu o wiedzę z przeszukiwania BigQuery Vector Search.
 
+## 10. Cleanup
 
+Po zakończeniu warsztatów możesz usunąć wdrożone usługi Cloud Run, aby nie generowały kosztów:
+
+```bash
+gcloud run services delete bielik --region $REGION
+```
+```bash
+gcloud run services delete embedding-gemma --region $REGION
+```
+```bash
+gcloud run services delete orchestration-api --region $REGION
+```
+
+> [!TIP]
+> Jeśli chcesz zachować usługi na swoim koncie — droga wolna! To Twój projekt i Twoje kredyty.
 
