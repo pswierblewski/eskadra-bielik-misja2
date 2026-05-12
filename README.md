@@ -37,13 +37,13 @@ Przykładowy kod źródłowy zawarty w tym repozytorium pozwala w szczególnośc
 
    ![Przegląd konta rozliczeniowego](images/google-credits-1.png)
 
-3. Skopiuj **Identyfikator konta rozliczeniowego** — znajdziesz go w **Płatności → Zarządzanie kontem**.
-
-   ![Identyfikator konta rozliczeniowego](images/google-credits-2.png)
-
-4. Zweryfikuj przyznane środki w **Płatności → Środki**.
+3. Zweryfikuj przyznane środki w **Płatności → Środki**.
 
    ![Przyznane środki Google Cloud Credits](images/google-credits-3.png)
+
+4. Skopiuj **Identyfikator konta rozliczeniowego** — znajdziesz go w **Płatności → Zarządzanie kontem**.
+
+   ![Identyfikator konta rozliczeniowego](images/google-credits-2.png)
 
 5. Otwórz Cloud Shell — kliknij ikonę w prawym górnym rogu konsoli ([dokumentacja](https://cloud.google.com/shell/docs))
 
