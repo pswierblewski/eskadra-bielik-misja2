@@ -300,4 +300,11 @@ gcloud run services delete orchestration-api --region $REGION
 > gcloud run services update orchestration-api --region $REGION --min-instances 0
 > ```
 > Przy następnym zapytaniu cold start potrwa ~2-3 min (ładowanie modelu do GPU).
+>
+> **Chcesz włączyć z powrotem?** Ustaw min-instances na 1:
+> ```bash
+> gcloud run services update bielik --region $REGION --min-instances 1
+> gcloud run services update embedding-gemma --region $REGION --min-instances 1
+> gcloud run services update orchestration-api --region $REGION --min-instances 1
+> ```
 
