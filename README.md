@@ -73,7 +73,7 @@ Przykładowy kod źródłowy zawarty w tym repozytorium pozwala w szczególnośc
 
 10. Sklonuj repozytorium z przykładowym kodem
     ```bash
-    git clone https://github.com/avedave/eskadra-bielik-misja2
+    git clone https://github.com/pswierblewski/eskadra-bielik-misja2
     ```
 
 11. Przejdź do katalogu z kodem źródłowym
