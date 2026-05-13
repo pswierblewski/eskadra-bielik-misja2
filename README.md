@@ -293,5 +293,11 @@ gcloud run services delete orchestration-api --region $REGION
 ```
 
 > [!TIP]
-> Jeśli chcesz zachować usługi na swoim koncie — droga wolna! To Twój projekt i Twoje kredyty.
+> **Nie chcesz usuwać?** Ustaw skalowanie do zera — serwisy zostają, ale nie generują kosztów gdy nie są używane:
+> ```bash
+> gcloud run services update bielik --region $REGION --min-instances 0
+> gcloud run services update embedding-gemma --region $REGION --min-instances 0
+> gcloud run services update orchestration-api --region $REGION --min-instances 0
+> ```
+> Przy następnym zapytaniu cold start potrwa ~2-3 min (ładowanie modelu do GPU).
 
