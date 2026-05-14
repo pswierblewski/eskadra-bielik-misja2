@@ -92,7 +92,7 @@ Przykładowy kod źródłowy zawarty w tym repozytorium pozwala w szczególnośc
 
 2. Otwórz ponownie terminal Cloud Shell i ustaw projekt (za każdym otwarciem terminala):
    ```bash
-   gcloud config set project <TWÓJ_PROJECT_ID>
+   gcloud config set project bielik-plock-2026
    ```
 
 3. Uruchom skrypt `setup_env.sh`
