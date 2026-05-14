@@ -90,9 +90,9 @@ Przykładowy kod źródłowy zawarty w tym repozytorium pozwala w szczególnośc
 
 1. Przeanalizuj skrypt `setup_env.sh`
 
-2. Otwórz ponownie terminal Cloud Shell i ustaw projekt:
+2. Otwórz ponownie terminal Cloud Shell i ustaw projekt (za każdym otwarciem terminala):
    ```bash
-   gcloud config set project $GOOGLE_CLOUD_PROJECT
+   gcloud config set project <TWÓJ_PROJECT_ID>
    ```
 
 3. Uruchom skrypt `setup_env.sh`
