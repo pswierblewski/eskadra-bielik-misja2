@@ -129,6 +129,8 @@ Przykładowy kod źródłowy zawarty w tym repozytorium pozwala w szczególnośc
 2. Uruchom skrypt `llm/cloud_run.sh`
    ```bash
    cd llm
+   ```
+   ```bash
    ./cloud_run.sh
    ```
 3. Sprawdź status usługi `bielik` w Cloud Console - Cloud Run - Services
@@ -149,6 +151,8 @@ Przykładowy kod źródłowy zawarty w tym repozytorium pozwala w szczególnośc
 2. Uruchom skrypt `embedding_model/cloud_run.sh`
    ```bash
    cd embedding_model
+   ```
+   ```bash
    ./cloud_run.sh
    ```
 3. Sprawdź status usługi `embedding-gemma` w Cloud Console - Cloud Run - Services
@@ -299,7 +303,11 @@ gcloud run services delete orchestration-api --region $REGION
 > **Nie chcesz usuwać?** Ustaw skalowanie do zera — serwisy zostają, ale nie generują kosztów gdy nie są używane:
 > ```bash
 > gcloud run services update bielik --region $REGION --min-instances 0
+> ```
+> ```bash
 > gcloud run services update embedding-gemma --region $REGION --min-instances 0
+> ```
+> ```bash
 > gcloud run services update orchestration-api --region $REGION --min-instances 0
 > ```
 > Przy następnym zapytaniu cold start potrwa ~2-3 min (ładowanie modelu do GPU).
@@ -307,7 +315,11 @@ gcloud run services delete orchestration-api --region $REGION
 > **Chcesz włączyć z powrotem?** Ustaw min-instances na 1:
 > ```bash
 > gcloud run services update bielik --region $REGION --min-instances 1
+> ```
+> ```bash
 > gcloud run services update embedding-gemma --region $REGION --min-instances 1
+> ```
+> ```bash
 > gcloud run services update orchestration-api --region $REGION --min-instances 1
 > ```
 
